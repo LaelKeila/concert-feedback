@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Partager ton expérience</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        header {
+            text-align: center;
+        }
+        header img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo AMG" style="max-height: 70px;">
+        <h1>Partager ton retour d’expérience</h1>
+    </header>
+
+    <section class="anonymat">
+        <form action="/merci" method="post">
+            {% if anonyme == 'non' %}
+                <div>
+                    <label for="nom">Nom :</label><br>
+                    <input type="text" id="nom" name="nom" required>
+                </div><br>
+
+                <div>
+                    <label for="telephone">Téléphone :</label><br>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div><br>
+            {% else %}
+                <div>
+                    <label for="nom">Nom :</label><br>
+                    <input type="text" id="nom" name="nom" placeholder="Anonyme" disabled>
+                </div><br>
+
+                <div>
+                    <label for="telephone">Téléphone :</label><br>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Anonyme" disabled>
+                </div><br>
+            {% endif %}
+
+            <div>
+                <label>Note (1 à 5) :</label><br>
+                <label><input type="radio" name="note" value="1" required> ⭐ Très insatisfait</label><br>
+                <label><input type="radio" name="note" value="2"> ⭐⭐ Insatisfait</label><br>
+                <label><input type="radio" name="note" value="3"> ⭐⭐⭐ Moyen</label><br>
+                <label><input type="radio" name="note" value="4"> ⭐⭐⭐⭐ Satisfait</label><br>
+                <label><input type="radio" name="note" value="5"> ⭐⭐⭐⭐⭐ Très satisfait</label>
+            </div><br>
+
+            <div>
+                <label for="temoignage">Ton témoignage :</label><br>
+                <textarea id="temoignage" name="temoignage" rows="4" cols="50"></textarea>
+            </div><br>
+
+            <div>
+                <label for="recommandations">Des recommandations ?</label><br>
+                <textarea id="recommandations" name="recommandations" rows="3" cols="50"></textarea>
+            </div><br>
+
+            <button class="btn" type="submit">Envoyer</button>
+        </form>
+    </section>
+</body>
+</html>

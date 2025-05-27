@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retour d’expérience – 5 ans AMG Burkina Faso</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Retour d’expérience – 5 ans AMG Burkina Faso</h1>
+
+    <!-- ✅ Chemin corrigé du logo -->
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo AMG" class="logo">
+
+    <!-- Partie anonyme + bouton -->
+    <form action="{{ url_for('formulaire') }}" method="get" class="anonymous-form">
+      <p>Souhaites-tu rester anonyme ?</p>
+      <label><input type="radio" name="anonyme" value="oui" required> Oui</label>
+      <label><input type="radio" name="anonyme" value="non"> Non</label>
+      <button type="submit">Partager mon retour d’expérience</button>
+    </form>
+
+    <!-- ✅ Texte modifié -->
+    <h2 class="event-highlight-text">Quelques images de l’événement</h2>
+
+    <!-- Section des photos -->
+    <div class="photos">
+      <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Photo 1">
+      <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Photo 2">
+      <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Photo 3">
+      <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Photo 4">
+    </div>
+  </div>
+</body>
+</html>

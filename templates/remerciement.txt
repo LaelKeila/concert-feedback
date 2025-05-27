@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Merci pour ton retour !</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            display: block;
+            margin: 0 auto;
+        }
+        .message {
+            margin-top: 30px;
+        }
+        .retour-accueil {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo AMG" style="max-height: 70px;">
+        <h1>Merci pour ton retour !</h1>
+    </header>
+
+    <section class="message">
+        <p>Ton témoignage a bien été enregistré. Nous te remercions sincèrement pour ta contribution à l'amélioration de nos événements.</p>
+        <p>✨ À très bientôt pour de nouvelles aventures avec <strong>AMG Burkina Faso</strong> !</p>
+    </section>
+
+    <div class="retour-accueil">
+        <a href="{{ url_for('index') }}" class="btn">Retour à l'accueil</a>
+    </div>
+</body>
+</html>

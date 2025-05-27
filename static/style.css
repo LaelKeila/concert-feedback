@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff6e6;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #d96400;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.anonymous-form {
+  background-color: #fff3d1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.anonymous-form p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.anonymous-form label {
+  margin: 0 10px;
+}
+
+.anonymous-form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.anonymous-form button:hover {
+  background-color: #e69500;
+}
+
+.event-highlight-text {
+  text-align: center;
+  margin: 30px 0 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #d96400;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.photos img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .anonymous-form {
+    padding: 15px;
+  }
+
+  .photos img {
+    max-width: 100%;
+  }
+
+  .event-highlight-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Centrage des pages du formulaire et de remerciement */
+.formulaire-container,
+.remerciement-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form textarea,
+form select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e69500;
+}
+

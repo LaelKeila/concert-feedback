@@ -17,32 +17,41 @@
             font-family: Arial, sans-serif;
             font-size: 18px;
             padding: 15px;
+            max-width: 600px;
+            margin: 0 auto; /* centre le contenu horizontalement */
+        }
+
+        form {
+            text-align: center; /* centre le formulaire */
         }
 
         input, textarea, select, button {
             font-size: 18px;
             padding: 10px;
             width: 100%;
-            margin-top: 10px;
             box-sizing: border-box;
+            margin-top: 10px;
         }
 
-        .btn {
-            background-color: #FFA500;
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button.btn {
+            cursor: pointer;
+            background-color: #f57c00;
             color: white;
             border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #e69500;
+            border-radius: 5px;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 20px;
         }
 
         @media (min-width: 768px) {
             body {
                 font-size: 20px;
-                max-width: 600px;
-                margin: auto;
             }
         }
     </style>
